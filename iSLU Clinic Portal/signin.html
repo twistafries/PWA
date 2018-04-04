@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<title>Sign In</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+			function goBack() {
+				window.history.back();
+			}
+		</script>
+	</head>
+	
+	<body>
+		<header class="header-block1">
+			<img class="logo1" src="slu.png">
+			<h1 class="title1">iSLU Clinic <br><span>Portal</span></h1>
+		</header>
+		
+		<form class="login">
+			<fieldset>
+				<legend>USER LOGIN</legend>
+				<input type="text" name="idnumber" placeholder="ID Number"><br>
+				<input type="text" name="password" placeholder="Password"><br>
+				<input type="button" name="login" value="LOGIN" onclick="send();">
+			</fieldset>
+		</form>
+		<button onclick="goBack()">Go Back</button>
+	</body>
+</html>

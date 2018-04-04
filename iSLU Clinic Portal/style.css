@@ -1,0 +1,155 @@
+/**SIGNIN**/
+body{
+     background-color: rgb(14, 40, 79);
+	width: 100vw; 
+	margin:0%;
+}
+.logo1{
+  	width: 8vw;
+    float:left;
+    margin-left: 30%;
+    position:relative;
+   
+}
+
+h1.title1::first-letter{
+	color:#000E52;
+	font-size: 100%;
+  	font-family: Adobe Naskh Medium;
+	text-shadow:none;
+    
+}
+span{
+	color:#000E52  ;
+	font-size: 40%;
+  	font-family: forte;
+  	margin-right:30%;
+  	margin-top:-5%;
+	text-shadow:none;
+	float:right;
+}
+h1.title1{
+	color: #D39900;
+	font-size: 750%;
+	font-family: Adobe Naskh Medium;
+	padding-top: 4%;
+  	text-shadow:
+   -2px -2px 0 #000E52,  
+    2px -2px 0 #000E52,
+    -2px 2px 0 #000E52,
+     2px 2px 0 #000E52;
+}
+fieldset{
+ 	border:1px solid #4D4D4D;
+ 	background-color: #252525;
+	border-radius:8px;
+	box-shadow:0 0 10px #1C2833;
+	width:30vw;
+	height: 30vh;
+	margin-top:-7%;
+	margin-left:35%;
+	text-align: center;	
+}
+legend{
+	background:black;
+	opacity: 0.9;
+	color:white;
+	border:1px 1px #4D4D4D;
+	border-radius:5px;
+	padding:3%;
+}
+input{
+	margin:3%;
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    border-radius: 3px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+input[type=button] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px; 
+}
+button {
+    padding:5px 15px; 
+    background:black;
+	opacity: 0.9;
+	color:white;
+	border:1px 1px #4D4D4D;
+    cursor:pointer;
+    border-radius: 5px; 
+    float:right;
+    margin-top:2%;
+    margin-right: 30%;
+}
+
+/*INDEX*/
+
+h1.title::first-letter{
+	color:#000E52;
+	font-size: 100%;
+  	font-family: Adobe Naskh Medium;
+	text-shadow:
+   -2px -2px 0 #D39900,  
+    2px -2px 0 #D39900,
+    -2px 2px 0 #D39900,
+     2px 2px 0 #D39900;
+    
+}
+span{
+	color:#000E52  ;
+	font-size: 40%;
+  	font-family: forte;
+  	margin-right:30%;
+  	margin-top:-5%;
+	text-shadow:none;
+	float:right;
+}
+h1.title{
+	color: #D39900;
+	font-size: 250%;
+	font-family: Adobe Naskh Medium;
+	padding-top: -1%;
+  	text-shadow:
+   -2px -2px 0 #000E52,  
+    2px -2px 0 #000E52,
+    -2px 2px 0 #000E52,
+     2px 2px 0 #000E52;
+}
+.link-nav{
+    float: right;
+    margin-top: -5%;
+    overflow:hidden;
+    text-align: center;
+    padding:0%;
+}
+
+.link-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.link-nav ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+.link-nav > ul > li > a{
+    color: #ffff;
+    display: block;
+    line-height: 0em;
+    padding: 0em 1em;
+    text-decoration: none;
+}
+.header-nav{
+   background:#CFCFCF;
+   opacity:0.9;
+   overflow: hidden;
+}

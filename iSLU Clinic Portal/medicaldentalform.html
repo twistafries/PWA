@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<title>Medical/Dental Form</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="formstyle.css">
+		<script>
+			function goBack() {
+				window.history.back();
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div class="header-nav">
+		<header class="header-block">
+		<img class="logo" src="slu.png">
+		<h1 class="title">iSLU Clinic Portal</h1>
+		</header>
+			
+		<nav class="link-nav">
+		<ul>
+			<li><a href="aboutus.html">ABOUT US</a></li>
+			<li><a href="medicaldentalform.html">FORMS</a></li>
+		</ul>
+		</nav>
+		</div>
+			
+		<h1><center> MEDICAL / DENTAL FORM </h1>	
+		<form id="clinicform">
+		<div class="form-content" align="center">	
+			<div class="patient">
+				<fieldset>
+
+					<legend>Patient Information</legend>
+					<label for="patientlname">Last Name:</label><input type="text" name="patientlname" size="40">
+					<label for="patientfname">First Name:</label><input type="text" name="patientfname" size="40">
+					<label for="patientmname">Middle Name:</label><input type="text" name="patientmname" size="40">
+					<label for="dob">Date of Birth:</label><input type="text" name="dob" size="40"><br>
+					Marital Status:<br>
+					<input type="radio" name="single">Single<br>
+					<input type="radio" name="married">Married<br>
+					<input type="radio" name="divorced">Divorced<br>
+					<input type="radio" name="widowed">Widowed<br>
+					<label for="religion">Religion:</label><input type="text" name="religion" size="40"><br>
+					Sex: <br>
+					<input type="radio" name="male">Male<br> 
+					<input type="radio" name="female">Female<br>
+					<label for="address">Address:</label><input type="text" name="address" size="40"><br>
+					<br>
+					<center><b>Contact Details</b><br>
+					<label for="patienthome">Home:</label><input type="text" name="patienthome" size="40"> 
+					<label for="patientmobile">Mobile:</label><input type="text" name="patientmobile" size="40">
+				</fieldset>
+			</div>
+			
+			<div class="medinfo">
+				<fieldset>
+					<br>
+					<legend><b>Medical Information</b></legend>
+					ALLERGIES to medication: <input type="radio">YES <input type="radio">NO<br>
+					<label>If YES, list allergies</label><input type="text" size="40"><br>
+					ALLERGIES to food, man-made materials, etc: <input type="radio">YES <input type="radio">NO<br>
+					<label>If YES, list allergies</label><input type="text" size="40"><br>
+					<br>
+					<b>Emergency Contact</b>
+					<br>
+					<label for="lname">Last Name: </label><input type="text" name="lname" size="40">
+					<label for="fname">First Name: </label><input type="text" name="fname" size="40">
+					<label for="mname">Middle Name: </label><input type="text" name="mname" size="40">
+					<label for="rel">Relationship: </label><input type="text" name="rel" size="40"><br>
+					<br>
+					<b>Contact Details</b><br>
+					<label for="hnum">Home: </label><input type="text" name="hnum" size="40"> 
+					<label for="mnum">Mobile: </label><input type="text" name="mnum" size="40"> 
+				</fieldset>
+			</div>
+			
+			<div class="hcprovider">
+				<fieldset>
+					<legend><b>Physician/Healthcare Provider</b></legend>
+					<label for="Plname">Last Name: </label><input type="text" name="Plname" size="40">
+					<label for="Pfname">First Name: </label><input type="text" name="Pfname" size="40">
+					<label for="Pmname">Middle Name: </label><input type="text" name="Pmname" size="40">
+					<label for="secialty">Specialty: </label><input type="text" name="specialty" size="40"><br>
+					<br>
+					<b>Contact Details</b><br>
+					<label for="Chome">Home: </label><input type="text" name="Chome" size="40"> 
+					<label for="Cmob">Mobile: </label><input type="text" name="Cmob" size="40">
+				</fieldset>
+			</div>
+		</div>	
+		</form>
+		<button onclick="goBack()">Go Back</button>
+		<button type="submit" form="clinicform" value="Submit">Submit</button>
+
+		<!--footer class="footer-block">
+			<p>Saint Louis University<br>
+			Maryheights Campus, Bakakeng<br>
+			2600 Baguio City, Philippines</p>
+			<insert phone number of the clinic-->
+		<!--/footer-->
+	</body>
+<html>

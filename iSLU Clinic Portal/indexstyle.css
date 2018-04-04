@@ -1,0 +1,87 @@
+/*INDEX*/
+
+body{
+    background-color:rgb(14, 40, 79);
+  width: 100vw; 
+  margin:0%;
+  color: white;
+  }
+.logo{
+	float:left;
+	width:3vw;
+	margin: 10px 15px 15px 10px;
+	position:relative;
+	margin-top: -1%;
+	padding:0%;
+}
+
+h1.title::first-letter{
+	color:#000E52;
+	font-size: 100%;
+  	font-family: Adobe Naskh Medium;
+	text-shadow:
+   -2px -2px 0 #D39900,  
+    2px -2px 0 #D39900,
+    -2px 2px 0 #D39900,
+     2px 2px 0 #D39900;
+    
+}
+span{
+	color:#000E52  ;
+	font-size: 40%;
+  	font-family: forte;
+  	margin-right:30%;
+  	margin-top:-5%;
+	text-shadow:none;
+	float:right;
+}
+h1.title{
+	color: #D39900;
+	font-size: 250%;
+	font-family: Adobe Naskh Medium;
+	padding-top: -1%;
+  	text-shadow:
+   -2px -2px 0 #000E52,  
+    2px -2px 0 #000E52,
+    -2px 2px 0 #000E52,
+     2px 2px 0 #000E52;
+}
+.link-nav{
+    float: right;
+    margin-top: -5%;
+    overflow:hidden;
+    text-align: center;
+    padding:0%;
+}
+
+.link-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.link-nav ul li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+.link-nav > ul > li > a{
+    color: #aaa;
+    display: block;
+    line-height: 0em;
+    padding: 0em 1em;
+    text-decoration: none;
+}
+.header-nav{
+   background-color: #CFCFCF;
+   opacity:0.9;
+   overflow: hidden;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #CFCFCF;
+    color: black;
+    text-align: center;
+}
