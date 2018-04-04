@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1{
+  text-align:center;
+  font-family:"Verdana";
+  text-shadow:
+     5px 5px 0 #000,
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+     color:white;
+     font-size:50px;
+     margin-bottom:0%;
+}
+
+.myAnimation {
+  width: 15vw;
+  height: 8vh;
+  position: relative;
+  background-color: yellowgreen;
+  margin:2%;
+  float: left;
+  text-align:center;
+  font-size:15px;
+  margin:2%;
+  font-family: tahoma;
+}
+.myAnimation:nth-of-type(2n+0) {
+    background-color:#FF4500;
+}
+.myAnimation:nth-of-type(3n+0) {
+    background-color: #40E0D0;
+}
+.myAnimation:nth-of-type(5n+0) {
+    background-color:#FF6347;
+}
+.myAnimation:nth-of-type(6n+0) {
+    background-color:#008080;
+}
+.myAnimation:nth-of-type(7n+0) {
+    background-color:#A0522D;
+}
+.myAnimation:nth-of-type(8n+0) {
+    background-color:	#FFA500;
+}
+
+	
+
+</style>
+<body>
+<h1>Sections</h1>
+
+<div id="demo"></div>
+
+
+<script>
+var sections = [
+			{products:"Bread"} ,
+			{products:"FruitJuice"},
+			{products:"soft drinks"},
+			{products:"water"},
+			{products:"beer"},
+			{products:"wine"},
+			{products:"fresh meat"},
+			{products:"fish"},
+			{products:"vegetables"},
+			{products:"fruits"},
+			{products:"milk"},
+			{products:"cereals"},
+			{products:"tea"},
+			{products:"coffee"},
+			{products:"biscuit"},
+			{products:"snacks"},
+			{products: "egg"},
+			{products: "herbs and spices"}, 
+			{products:"canned goods"},
+			{products: "pasta"},
+			{products:"cheese"},
+			{products:"sausage"}, 
+			{products: "ice cream"},
+			{products:"health care"},
+			{products:"dental care"},
+			{products:"hair"},
+			{products:"soap"},
+			{products:"skin care"},
+			{products:"feminine"},
+			{products:"baby needs"},
+			{products:"tissue"},
+			{products:"detergents and bleach"},
+			{products:"cleaning materials"},
+			{products:"yogurt"},
+			{products:"butter"}	
+				];
+function getStoreDetails(sections) {
+	return `<div class="myAnimation"> 
+<h3>${sections.products}</h3>
+`;
+}
+function showStore(storeDetails) {
+	document.querySelector("#demo").innerHTML += storeDetails;
+}
+sections.map(getStoreDetails).forEach(showStore);
+
+</script>
+</body>
+</html>
