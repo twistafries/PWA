@@ -1,0 +1,298 @@
+var products = {
+			"Bread" : 
+				[	{"productID": "br1",
+					"name":"spanish bread",
+					"price": 35.00},
+					
+					{"productId": "br2",
+					"name":"gardenia regular slice white bread",
+					"price": 62.00},
+					 
+					{"productID": "br3",
+					"name":"gardenia high fiber whole wheat",
+					"price": 56.50},
+
+					{"productID": "br4",
+					"name":"marby pinoy tasty",
+					"price": 35.00},
+
+					{"productID": "br5",
+					"name":"baker john white bread",
+					"price": 45.50},
+				],
+
+			"FruitJuice" :
+				[	{"productID": "fj1",
+					"name":"ceres fruit juice apple",
+					"price": 86.00},
+					
+					{"productID": "fj2",
+					"name":"fiber & fruit apple flavor juice drink",
+					"price": 18.50},
+					
+					{"productID": "fj3",
+					"name":"pokka carrot fruit juice 5+1",
+					"price": 158.75},
+					
+					{"productID": "fj4",
+					"name":"juss fruit mix juice",
+					"price": 72.50},
+					
+					{"productID": "fj5",
+					"name":"fiber & fruit peach flavor juice drink",
+					"price": 23.50}
+				],
+
+			"soft drinks"	:
+				[
+					{"productID": "sd1",
+					"name":"coke zero",
+					"price": 26.75},
+					
+					{"productID": "sd2",
+					"name":"coke regular 1.5L",
+					"price": 60.00},
+					
+					{"productID": "sd3",
+					"name":"sprite regular 330ml",
+					"price": 26.75},
+					
+					{"productID": "sd4",
+					"name":"root beer",
+					"price": 25.00},
+					
+					{"productID": "sd5",
+					"name":"pepsi cola trio pack",
+					"price": 99.00}
+				],
+
+			"water"	:
+				[
+					{"productID": "wa1",
+					"name":"summit water",
+					"price": 18.50},
+					
+					{"productID": "wa2",
+					"name":"absolute",
+					"price": 75.00},
+					
+					{"productID": "wa3",
+					"name":"wilkins",
+					"price": 16.00},
+				
+					{"productID": "wa4",
+					"name":"blue ice blue",
+					"price": 23.50}
+				
+				],
+
+			"beer"	:
+				[
+					{"productID": "be1",
+					"name":"SMB light can",
+					"price": 42.00},
+					
+					{"productID": "be2",
+					"name":"heineken pack",
+					"price": 269.00},
+					
+					{"productID": "be3",
+					"name":"SMB pale pilsen",
+					"price": 40.00},
+					
+					{"productID": "be4",
+					"name":"red horse",
+					"price": 78.25},
+					
+					{"productID": "be5",
+					"name":"colt 45",
+					"price": 38.25}
+				],
+				
+			"wine"	:
+				[
+					{"productID": "wi1",
+					"name":"novellino sangria",
+					"price": 212.00},
+					
+					{"productID": "wi2",
+					"name":"tavernello vino rosso",
+					"price": 250.00},
+					
+					{"productID": "wi3",
+					"name":"warburn estate",
+					"price": 450.00},
+					
+					{"productID": "wi4",
+					"name":"maria clara",
+					"price": 163.50}
+					],
+					
+			"fresh meat"	:
+				[
+					{"productID": "fm1",
+					"name":"chicken thigh",
+					"price": 117.50},
+					
+					{"productID": "fm2",
+					"name":"lean ground pork",
+					"price": 65.00},
+					
+					{"productID": "fm3",
+					"name":"chicken drumstick",
+					"price": 90.35},
+					
+					{"productID": "fm4",
+					"name":"pork cubes",
+					"price": 143.00},
+					
+					{"productID": "fm5",
+					"name":"pork chop",
+					"price": 110.00}
+				],
+				
+			"fish"	:
+				[
+					{"productID": "fi1",
+					"name":"galunggong",
+					"price": 109.00},
+					
+					{"productID": "fi2",
+					"name":"tilapia",
+					"price": 92.40},
+					
+					{"productID": "fi3",
+					"name":"bangus belly",
+					"price": 118.50}
+				],
+
+			"vegetables"	:
+				[
+					{"productID": "ve1",
+					"name":"kangkong",
+					"price": 19.00},
+					
+					{"productID": "ve2",
+					"name":"carrots",
+					"price": 30.00},
+					
+					{"productID": "ve3",
+					"name":"pechay",
+					"price": 20.50},
+					
+					{"productID": "ve4",
+					"name":"eggplant",
+					"price": 42.28},
+					
+					{"productID": "ve5",
+					"name":"potato",
+					"price": 60.00}
+				
+				],
+	
+			"fruits"	:
+				[
+					{"productID": "fr1",
+					"name":"banana",
+					"price": 159.00},
+				
+					{"productID": "fr2",
+					"name":"lemon",
+					"price": 32.00},
+					
+					{"productID": "fr3",
+					"name":"avocado",
+					"price": 75.00},
+					
+					{"productID": "fr4",
+					"name":"apple",
+					"price": 25.00},
+					
+					{"productID": "fr5",
+					"name":"grapes",
+					"price": 199.50}
+				],
+				
+			"cooking ingregients"	:
+				[
+					{"productID": "ci1",
+					"name":"magic sarap",
+					"price": 3.00},
+					
+					{"productID": "ci2",
+					"name":"datu puti",
+					"price": 33.20},
+					
+					{"productID": "ci3",
+					"name":"cooking oil",
+					"price": 100.00},
+				],
+			"cereals"	:
+				[
+					{"productID": "ce1",
+					"name":"nestle fitnesse",
+					"price": 172.00},
+					
+					{"productID": "ce2",
+					"name":"fruity loopy",
+					"price": 19.00},
+					
+					{"productID": "ce3",
+					"name":"koko krunch",
+					"price": 85.50}
+				],
+				
+			"milk"	:
+				[
+					{"productID": "mi1",
+					"name":"cowhead",
+					"price": 78.00},
+					
+					{"productID": "me2",
+					"name":"nestle fresh milk",
+					"price": 32.00},
+					
+					{"productID": "me3",
+					"name":"anchor",
+					"price": 24.70},
+					
+					{"productID": "me4",
+					"name":"anlene gold milk",
+					"price": 155.00}
+				
+				],
+
+			"tea"	:
+				[
+					{"productID": "te1",
+					"name":"ahmad green tea",
+					"price": 132.00},
+					
+					{"productID": "te2",
+					"name":"white tea",
+					"price": 107.00},
+					
+					{"productID": "te3",
+					"name":"gold leaf herbal",
+					"price": 119.00}
+				],
+				
+			"coffee"	:
+				[
+					{"productID": "co1",
+					"name":"great taste 3in1",
+					"price": 9.80},
+					
+					{"productID": "co2",
+					"name":"nescafe cream white",
+					"price": 179.50}
+				],
+			"biscuit"	:
+				[
+					{"productID": "bi1",
+					"name":"monde butter",
+					"price": 12.50}
+					
+				],
+				
+}
