@@ -1,0 +1,85 @@
+SECTIONS
+
+01:	Chicken Produce
+02:	Fish Produce
+03:	Fruits and Vegetables
+04:	Fruits and Vegetables
+05:	Fruits and Vegetables
+06:	Fruits and Vegetables
+
+07:	Ice Cream
+	Frozen Section
+08:	Bread
+	Pastries
+	Milk
+09:	Cereals
+	Oatmeals
+10:	Pasta
+11:	Canned Vegetables
+12:	Tomato Sauce
+	Tomato Paste
+13:	Imported Goods
+14:	Imported Goods
+15:	Cooking Oil
+16:	Clothing
+17:	Chocolates
+	Coffee
+18:	Appliances
+19:	Kitchen Needs
+
+20:	Rice
+	Sugar
+	Condiments
+	Mixes
+	Soups
+21:	salad aids
+	cheese
+	spreads
+	pantyliners
+	sanitary napkins
+22:	home remedies
+	sanitizers
+	cotton
+	lotion
+	powder
+23:	whitening soap
+	body wash
+	germicidal soap
+	imported lotion
+24:	body care
+	body spray
+	mouthwash
+	toothpaste
+25:	facial toner
+	facial wash
+	facial cream
+	conditioner
+26:	shampoo
+	detergent bar
+27:	detergent bar
+	detergent powder
+	household
+	fabric conditioner
+	bleaches
+28:	household
+	picnic items
+29:	bottled juice
+	tea
+30:	softdrinks
+	canned beer
+	energy drink
+	canned biscuits
+31:	wafers
+	canned biscuits
+	packed biscuits
+32:	nuts
+	crackers
+	popcorn
+	corn snacks
+	potato chips
+
+33:	Eggs
+	Fresh Produce
+34:	Powdered Milk
+	Coffee Beans
+	
