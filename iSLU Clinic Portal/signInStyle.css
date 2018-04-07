@@ -1,0 +1,91 @@
+/**SIGNIN**/
+body{
+     background-color: #CFCFCF;
+	width: 100vw; 
+	margin:0%;
+}
+.logo1{
+  	width: 8vw;
+    float:center;
+    
+    position:relative;
+   
+}
+
+h1.title1::first-letter{
+	color:#000E52;
+	font-size: 100%;
+  	font-family: Adobe Naskh Medium;
+	text-shadow:none;
+    
+}
+span{
+	color:#000E52  ;
+	font-size: 40%;
+  	font-family: forte;
+  	margin-right:30%;
+  	margin-top:-5%;
+	text-shadow:none;
+	float:right;
+}
+h1.title1{
+	color: #D39900;
+	font-size: 750%;
+	font-family: Adobe Naskh Medium;
+	padding-top: 4%;
+  	text-shadow:
+   -2px -2px 0 #000E52,  
+    2px -2px 0 #000E52,
+    -2px 2px 0 #000E52,
+     2px 2px 0 #000E52;
+}
+fieldset{
+ 	border:1px solid #4D4D4D;
+ 	background-color: #252525;
+	border-radius:8px;
+	box-shadow:0 0 10px #1C2833;
+	width:30vw;
+	height: 30vh;
+	margin-top:-7%;
+	margin-left:35%;
+	text-align: center;	
+}
+legend{
+	background:black;
+	opacity: 0.9;
+	color:white;
+	border:1px 1px #4D4D4D;
+	border-radius:5px;
+	padding:3%;
+}
+input{
+	margin:3%;
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    border-radius: 3px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+input[type=button] {
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px; 
+}
+button {
+    padding:5px 15px; 
+    background:black;
+	opacity: 0.9;
+	color:white;
+	border:1px 1px #4D4D4D;
+    cursor:pointer;
+    border-radius: 5px; 
+    float:right;
+    margin-top:2%;
+    margin-right: 30%;
+}
