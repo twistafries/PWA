@@ -6,9 +6,119 @@
 
 	<body>
 		<div>
-			<button class="btn" name="select" >Select Products</button>
-			<button class="btn" name="generate">Generate Map</button>
+			<button class="btn" id="select" onclick="showRad()">Select Products</button>
+				<div id="rad">
+					<form>
+						<input type="radio" value="Fresh Meat"> Fresh Meat
+						<input type="radio" value="Fish"> Fish
+						<input type="radio" value="Fruits and Veg"> Fruits and Vegetables
+						<input type="radio" value="Frozen Food"> Frozen Food
+						<input type="radio" value="IceCream"> Ice Cream
+						<input type="radio" value="Bread/Pastries"> Bread and Pastries
+						<input type="radio" value="Milk"> Milk
+						<input type="radio" value="Cereal/Oatmeal"> Cereal or Oatmeal
+						<input type="radio" value="Pasta"> Pasta
+						<input type="radio" value="Canned Goods"> Canned Goods
+						<input type="radio" value="Tomato Sauces/Paste"> Tomato Sauces or Paste
+						<input type="radio" value="Imports"> Imported Goods
+						<input type="radio" value="Cooking Oil"> Cooking Oil
+						<input type="radio" value="Clothing"> Clothing
+						<input type="radio" value="Chocolates"> Chocolates
+						<input type="radio" value="Coffee"> Coffee
+						<input type="radio" value="Appliances"> Appliances
+						<input type="radio" value="Kitchen Necessities"> Kitchen Necessities
+						<input type="radio" value="Rice"> Rice
+						<input type="radio" value="Sugar"> Sugar
+					</form>	
+				</div>
+				
+				<!-- missing select entrance -->
+				
+			<button class="btn" id="generate" onclick = "drawMap()">Generate Map</button>
+			<button class="btn" id="hide" onclick = "hideMap()">Hide Map</button>
+			<canvas id = "gMap"> You might need to update your browser to see the image. </canvas>
 		</div>
+		<div>
+		<a href="">About the App</a>
+		</div>
+		
+		<script>
+			function showRad(){
+				var radDiv = document.getElementById("rad");
+				if(radDiv.style.display === "none"){
+					radDiv.style.display = "block";
+				} else {
+					radDiv.style.display = "none";
+				}
+			}
+			
+			function hideMap(){
+				var canvas = document.getElementById("gMap");
+				var gen = document.getElementById("generate");
+				var hide = document.getElementById("hide");
+				gen.style.display = "block";
+				hide.style.display = "none";
+				canvas.style.display = "none";
+			}
+			
+			<!-- load an image instead -->
+			function drawMap(){
+				var canvas = document.getElementById("gMap");
+				canvas.style.display = "block";
+				canvas.width = 800;
+				canvas.height = 900;
+				var context = gMap.getContext("2d");
+				var hide = document.getElementById("hide");
+				var gen = document.getElementById("generate");
+				hide.style.display = "block";
+				gen.style.display = "none";
+				var image = new Image();
+				image.onload = function(){
+					context.drawImage(image, 0, 0, image.width, image.height,
+										0, 0, canvas.width, canvas.height);
+				}
+				
+				image.src = "SMSupermarketLayout.jpg";
+				var json = [{
+						"sections": [
+							{ "section#": "01", "sectionName": "Chicken Produce",  "coordinates": "", "products" : ["magnolia", "sm best buy"]},
+							{ "section#": "02", "sectionName": "Fish Produce",  "coordinates": ""},
+							{ "section#": "03", "sectionName": "Fruits and Veg",  "coordinates": ""},
+							{ "section#": "04", "sectionName": "Fruits and Veg",  "coordinates": ""},
+							{ "section#": "05", "sectionName": "Fruits and Veg",  "coordinates": ""},
+							{ "section#": "06", "sectionName": "Fruits and Veg",  "coordinates": ""},
+							{ "section#": "07", "sectionName": "Ice Cream, Frozens",  "coordinates": ""},
+							{ "section#": "08", "sectionName": "Bread, Pastries, Milk",  "coordinates": ""},
+							{ "section#": "09", "sectionName": "Cereal, Oatmeal",  "coordinates": ""},
+							{ "section#": "10", "sectionName": "Pasta",  "coordinates": ""},
+							{ "section#": "11", "sectionName": "Canned Veg",  "coordinates": ""},
+							{ "section#": "12", "sectionName": "Tomato Stuff",  "coordinates": ""},
+							{ "section#": "13", "sectionName": "Imports",  "coordinates": ""},
+							{ "section#": "14", "sectionName": "Imports",  "coordinates": ""},
+							{ "section#": "15", "sectionName": "Cooking Oil",  "coordinates": ""},
+							{ "section#": "16", "sectionName": "Clothing",  "coordinates": ""},
+							{ "section#": "17", "sectionName": "Choco, Coffee",  "coordinates": ""},
+							{ "section#": "18", "sectionName": "Appliances",  "coordinates": ""},
+							{ "section#": "19", "sectionName": "Kitchen Needs",  "coordinates": ""},
+							{ "section#": "20", "sectionName": "Rice, Sugar, Condiments, Mixes, Soups",  "coordinates": ""},
+							{ "section#": "21", "sectionName": "Feminine Hygiene",  "coordinates": ""},
+							{ "section#": "22", "sectionName": "Home Remedies, Sanitizers, Cotton, Lotions, Powder",  "coordinates": ""},
+							{ "section#": "23", "sectionName": "Soaps and Washes",  "coordinates": ""},
+							{ "section#": "24", "sectionName": "Hygiene",  "coordinates": ""},
+							{ "section#": "25", "sectionName": "Men's Hygiene",  "coordinates": ""},
+							{ "section#": "26", "sectionName": "Hair Care",  "coordinates": ""},
+							{ "section#": "27", "sectionName": "Detergents",  "coordinates": ""},
+							{ "section#": "28", "sectionName": "Detergents",  "coordinates": ""},
+							{ "section#": "29", "sectionName": "",  "coordinates": ""},
+							{ "section#": "30", "sectionName": "",  "coordinates": ""},
+							{ "section#": "31", "sectionName": "",  "coordinates": ""},
+							{ "section#": "32", "sectionName": "",  "coordinates": ""}
+						]
+					}];
+					
+			}
+			
+		</script>
 	</body>
 	
 </html>
