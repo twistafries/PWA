@@ -9,7 +9,15 @@ div {
 	margin: auto;
 }
 
-.btn {
+div#rad {
+	display: none;
+}
+
+canvas {
+	display: none;
+}
+
+button {
 	display: block;
 	border: none;
 	color: white;
@@ -20,10 +28,20 @@ div {
 	font-size: 9vmin;
 }
 
-.btn[name=select]{
+input {
+	background-color: #2196F3;
+	vertical-align: middle;
+	
+}
+button#hide {
+	display: none;
+	background-color: #f45042;
+}
+
+button#select{
 	background-color: #4286f4;
 }
 
-.btn[name=generate]{
+button#generate{
 	background-color: #f49e42;
 }
