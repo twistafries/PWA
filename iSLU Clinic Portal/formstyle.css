@@ -1,7 +1,7 @@
 body{
   background-color: rgb(14, 40, 79);
-	width: 100vw; 
-	margin:0%;
+    width: 100vw; 
+    margin:0%;
   color: white;
 }
 .header-nav{
@@ -10,19 +10,19 @@ body{
   overflow: hidden;
 }
 .logo{
-	float:left;
-	width:3vw;
-	margin: 10px 15px 15px 10px;
-	position:relative;
-	margin-top: -1%;
-	padding:0%;
+    float:left;
+    width:3vw;
+    margin: 10px 15px 15px 10px;
+    position:relative;
+    margin-top: -1%;
+    padding:0%;
 }
 h1.title{
-	color: #D39900;
-	font-size: 250%;
-	font-family: Adobe Naskh Medium;
-	padding-top: -1%;
-  	text-shadow:
+    color: #D39900;
+    font-size: 250%;
+    font-family: Adobe Naskh Medium;
+    padding-top: -1%;
+    text-shadow:
     -2px -2px 0 #000E52,  
     2px -2px 0 #000E52,
     -2px 2px 0 #000E52,
@@ -47,7 +47,7 @@ h1.title{
 }
 
 .link-nav > ul > li > a{
-    color: blue;
+    color: #aaa;
     display: block;
     line-height: 0em;
     padding: 0em 1em;
