@@ -82,9 +82,11 @@
 			}
 			
 			if("serviceWorker" in navigator) {
-				navigator.serviceWorker
-						.register("/serviceworker.js")
-						.then(function () {console.log("Service Worker Registered"); });
+				navigator.serviceWorker.register("/serviceworker.js").then(function () {
+					console.log("Service Worker Registered"); 
+				}).catch(function(){
+					console.log("Unable to register service worker.");
+				});
 			}
 		</script>
 	</body>
