@@ -33,6 +33,7 @@ button{
 
 .btn{
 	width: 90%;
+	margin: 5px;
 	height: 50%;
 }
 
@@ -42,11 +43,6 @@ button{
 	text-align: center;
 }
 
-input {
-	background-color: #2196F3;
-	vertical-align: middle;
-	display: none;	
-}
 
 button#hide {
 	display: none;
@@ -75,6 +71,14 @@ label {
 
 .checkbox {
 	max-height: 100%;
+
+}
+
+input {
+	background-color: #2196F3;
+	vertical-align: middle;
+	display: none;
+
 }
 
 .check:checked + .cblabel {
