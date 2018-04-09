@@ -1,8 +1,10 @@
 body {
-	background-color: #f9f9f9;
+	background: #f4f2f5;
 	height: 100%;
 	max-width: 100%;
 	min-width: 50%;
+	border: 0;
+	position: relative;
 }
 
 div {
@@ -11,29 +13,39 @@ div {
 	margin: auto;
 }
 
-div#rad {
+form#rad {
 	display: none;
 }
 
 canvas {
 	display: none;
+	width: 100%;
 }
 
-button {
+button{
 	display: block;
-	border: none;
-	color: white;
-	width: 90%;
 	margin-left: 5%;
-	height: 50%;
 	border-radius: 30px;
+	font-size: 9vmin;	
+	color: white;
+	border: none;
+}
+
+.btn{
+	width: 90%;
+	height: 50%;
+}
+
+.sub {
+	width: 70%;
 	font-size: 9vmin;
+	text-align: center;
 }
 
 input {
 	background-color: #2196F3;
 	vertical-align: middle;
-	display: none;
+	display: none;	
 }
 
 button#hide {
@@ -45,6 +57,7 @@ button#select {
 	background-color: #4286f4;
 }
 
+
 button#generate {
 	background-color: #f49e42;
 }
@@ -53,22 +66,26 @@ label {
 	border: 1px solid #ccc;
 	padding: 10px;
 	margin: 0 0 10px;
-	display: inline-table;
 	width: 25%; 
+	position: relative;
 	text-align: left;
 	border-radius: 30px;
-}
-
-.genhide {
-	position: relative;
+	display: inline-table;
 }
 
 .checkbox {
-	position: relative;
 	max-height: 100%;
 }
 
 .check:checked + .cblabel {
-	background-color: blue;
+	background-color: #91b4ff;
 }
 
+@media screen and (max-width: 768px){
+	label {
+		display: block;
+		text-align: center;
+		width: 70%;
+		font-size: 23px;
+	}
+}

@@ -1,173 +1,87 @@
 <html>
+	<!-- to do:
+	3. skip loading an image, use canvas to draw the map instead
+	4. service worker -->
 	<head>
 		<title>SM Baguio MApp</title>
 		<link rel="stylesheet" href="styles/style_mobile.css"/>
-		<script>
-			function showRad() {
-				var radDiv = document.getElementById("rad");
-				if(radDiv.style.display === "none") {
-					radDiv.style.display = "block";
-				} else {
-					radDiv.style.display = "none";
-				}
-			}
-			
-			function hideMap() {
-				var canvas = document.getElementById("gMap");
-				var gen = document.getElementById("generate");
-				var hide = document.getElementById("hide");
-				gen.style.display = "block";
-				hide.style.display = "none";
-				canvas.style.display = "none";
-			}
-			<!-- load an image instead -->
-			function drawMap() {
-				var canvas = document.getElementById("gMap");
-				canvas.style.display = "block";
-				canvas.width = 800;
-				canvas.height = 900;
-				var context = gMap.getContext("2d");
-				var hide = document.getElementById("hide");
-				var gen = document.getElementById("generate");
-				hide.style.display = "block";
-				gen.style.display = "none";
-				var image = new Image();
-				image.onload = function() {
-					context.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvas.width, canvas.height);
-				}
-				
-				image.src = "SMSupermarketLayout.jpg";
-				var json = [{
-						"sections": [
-							{ "section#": "01", "sectionName": "Chicken Produce",  "coordinates": "", "products" : ["magnolia", "sm best buy"]},
-							{ "section#": "02", "sectionName": "Fish Produce",  "coordinates": ""},
-							{ "section#": "03", "sectionName": "Fruits and Veg",  "coordinates": ""},
-							{ "section#": "04", "sectionName": "Fruits and Veg",  "coordinates": ""},
-							{ "section#": "05", "sectionName": "Fruits and Veg",  "coordinates": ""},
-							{ "section#": "06", "sectionName": "Fruits and Veg",  "coordinates": ""},
-							{ "section#": "07", "sectionName": "Ice Cream, Frozens",  "coordinates": ""},
-							{ "section#": "08", "sectionName": "Bread, Pastries, Milk",  "coordinates": ""},
-							{ "section#": "09", "sectionName": "Cereal, Oatmeal",  "coordinates": ""},
-							{ "section#": "10", "sectionName": "Pasta",  "coordinates": ""},
-							{ "section#": "11", "sectionName": "Canned Veg",  "coordinates": ""},
-							{ "section#": "12", "sectionName": "Tomato Stuff",  "coordinates": ""},
-							{ "section#": "13", "sectionName": "Imports",  "coordinates": ""},
-							{ "section#": "14", "sectionName": "Imports",  "coordinates": ""},
-							{ "section#": "15", "sectionName": "Cooking Oil",  "coordinates": ""},
-							{ "section#": "16", "sectionName": "Clothing",  "coordinates": ""},
-							{ "section#": "17", "sectionName": "Choco, Coffee",  "coordinates": ""},
-							{ "section#": "18", "sectionName": "Appliances",  "coordinates": ""},
-							{ "section#": "19", "sectionName": "Kitchen Needs",  "coordinates": ""},
-							{ "section#": "20", "sectionName": "Rice, Sugar, Condiments, Mixes, Soups",  "coordinates": ""},
-							{ "section#": "21", "sectionName": "Feminine Hygiene",  "coordinates": ""},
-							{ "section#": "22", "sectionName": "Home Remedies, Sanitizers, Cotton, Lotions, Powder",  "coordinates": ""},
-							{ "section#": "23", "sectionName": "Soaps and Washes",  "coordinates": ""},
-							{ "section#": "24", "sectionName": "Hygiene",  "coordinates": ""},
-							{ "section#": "25", "sectionName": "Men's Hygiene",  "coordinates": ""},
-							{ "section#": "26", "sectionName": "Hair Care",  "coordinates": ""},
-							{ "section#": "27", "sectionName": "Detergents",  "coordinates": ""},
-							{ "section#": "28", "sectionName": "Detergents",  "coordinates": ""},
-							{ "section#": "29", "sectionName": "",  "coordinates": ""},
-							{ "section#": "30", "sectionName": "",  "coordinates": ""},
-							{ "section#": "31", "sectionName": "",  "coordinates": ""},
-							{ "section#": "32", "sectionName": "",  "coordinates": ""}
-						]
-					}];	
-			}
-		</script>
+		<script src="appfx.js"></script> 
 	</head>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<body>
-		<div class="container">
-			<div class="btn_select">
+		<div id="container">
 				<button class="btn" id="select" onclick="showRad()">Select Products</button>
-			</div>
 				<center>
-					<div class="checkbox" id="rad">
-						<form>
-							<input type="checkbox" class="check" id="item1">
+						<form class="checkbox" id="rad">
+							<input type="checkbox" class="check" id="item1" name="">
 							<label class="cblabel" for="item1">Fresh Meat</label>
-							<input type="checkbox" class="check" id="item2">
+							<input type="checkbox" class="check" id="item2" name="">
 							<label class="cblabel" for="item2">Fish</label>
-							<input type="checkbox" class="check" id="item3">
+							<input type="checkbox" class="check" id="item3" name="">
 							<label class="cblabel" for="item3">Fruits and Vegetables</label>
 							
-							<input type="checkbox" class="check" id="item4">
+							<input type="checkbox" class="check" id="item4" name="">
 							<label class="cblabel" for="item4">Frozen Food</label>
-							<input type="checkbox" class="check" id="item5">
+							<input type="checkbox" class="check" id="item5" name="">
 							<label class="cblabel" for="item5">Ice Cream</label>
-							<input type="checkbox" class="check" id="item6">
+							<input type="checkbox" class="check" id="item6" name="">
 							<label class="cblabel" for="item6">Bread and Pastries</label>
 							
-							<input type="checkbox" class="check" id="item7">
+							<input type="checkbox" class="check" id="item7" name="">
 							<label class="cblabel" for="item7">Milk</label>
-							<input type="checkbox" class="check" id="item8">
+							<input type="checkbox" class="check" id="item8" name="">
 							<label class="cblabel" for="item8">Cereal or Oatmeal</label>
-							<input type="checkbox" class="check" id="item9">
+							<input type="checkbox" class="check" id="item9" name="">
 							<label class="cblabel" for="item9">Pasta</label>
 							
-							<input type="checkbox" class="check" id="item10">
+							<input type="checkbox" class="check" id="item10" name="">
 							<label class="cblabel" for="item10">Canned Goods</label>
-							<input type="checkbox" class="check" id="item11">
+							<input type="checkbox" class="check" id="item11" name="">
 							<label class="cblabel" for="item11">Tomato Sauces or Paste</label>
-							<input type="checkbox" class="check" id="item12">
+							<input type="checkbox" class="check" id="item12" name="">
 							<label class="cblabel" for="item12">Imported Goods</label>
 							
-							<input type="checkbox" class="check" id="item13">
+							<input type="checkbox" class="check" id="item13" name="">
 							<label class="cblabel" for="item13">Cooking Oil</label>
-							<input type="checkbox" class="check" id="item14">
+							<input type="checkbox" class="check" id="item14" name="">
 							<label class="cblabel" for="item14">Clothing</label>
-							<input type="checkbox" class="check" id="item15">
+							<input type="checkbox" class="check" id="item15" name="">
 							<label class="cblabel" for="item15">Chocolates</label>
 							
-							<input type="checkbox" class="check" id="item16">
+							<input type="checkbox" class="check" id="item16" name="">
 							<label class="cblabel" for="item16">Coffee</label>
-							<input type="checkbox" class="check" id="item17">
+							<input type="checkbox" class="check" id="item17" name="">
 							<label class="cblabel" for="item17">Appliances</label>
-							<input type="checkbox" class="check" id="item18">
+							<input type="checkbox" class="check" id="item18" name="">
 							<label class="cblabel" for="item18">Kitchen Necessities</label>
 							
-							<input type="checkbox" class="check" id="item19">
+							<input type="checkbox" class="check" id="item19" name="">
 							<label class="cblabel" for="item19">Rice</label>
-							<input type="checkbox" class="check" id="item20">
+							<input type="checkbox" class="check" id="item20" name="">
 							<label class="cblabel" for="item20">Sugar</label>
-							<input type="checkbox" class="check" id="item21">
+							<input type="checkbox" class="check" id="item21" name="">
 							<label class="cblabel" for="item21">Feminine Hygiene</label>
 							
-							<input type="checkbox" class="check" id="item22">
+							<input type="checkbox" class="check" id="item22" name="">
 							<label class="cblabel" for="item22">Home Remedies</label>
-							<input type="checkbox" class="check" id="item23">
+							<input type="checkbox" class="check" id="item23" name="">
 							<label class="cblabel" for="item23">Soaps and Washes</label>
-							<input type="checkbox" class="check" id="item24">
+							<input type="checkbox" class="check" id="item24" name="">
 							<label class="cblabel" for="item24">Hygiene</label>
 							
-							<input type="checkbox" class="check" id="item25">
+							<input type="checkbox" class="check" id="item25" name="">
 							<label class="cblabel" for="item25">Men's Hygiene</label>
-							<input type="checkbox" class="check" id="item26">
+							<input type="checkbox" class="check" id="item26" name="">
 							<label class="cblabel" for="item26">Hair Care</label>
-							<input type="checkbox" class="check" id="item27">
+							<input type="checkbox" class="check" id="item27" name="">
 							<label class="cblabel" for="item27">Detergents</label>
-						</form>	
-					</div>
-				</center>
-				
-				<!-- missing select entrance -->
-			
-			<div class="genhide">	
-				<button class="btn" id="generate" onclick = "drawMap()">Generate Map</button>
-				<button class="btn" id="hide" onclick = "hideMap()">Hide Map</button>
+							<button class="sub" id="generate" onclick = "drawMap()" type="button">Generate Map</button>
+							</form>	
+				<a href="about/About.html" id="abt">About the App</a>		
+				<button class="sub" id="hide" onclick = "hideMap()" type="button">Hide Map</button>
+				<canvas id = "gMap"> You might need to update your browser or use a different one to see the image.</canvas>
+				</center>		
 			</div>
-			
-			<div>
-				<canvas id = "gMap"> You might need to update your browser to see the image.</canvas>
-			</div>
-		</div>
-		
-		<div class="about">
-			<a href="">About the App</a>
-		</div>
-		
-		
 	</body>
 	
 </html>
