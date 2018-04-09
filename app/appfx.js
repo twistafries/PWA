@@ -6,6 +6,19 @@ function showRad() {
 	a.style.display = a.style.display === 'block' ? 'none' : 'block';
 }
 
+function getForm(){
+	var inputs = document.getElementsByTagName('input');
+	var checked = [];
+	for (var i = 0; i < inputs.length; i++){
+		if(inputs[i].type == "checkbox"){
+			if(inputs[i].checked){
+				checked.push(inputs[i]);
+			}
+		}
+	}
+	return checked;
+}
+
 function hideMap() {
 	var canvas = document.getElementById("gMap");
 	var gen = document.getElementById("generate");
@@ -16,6 +29,7 @@ function hideMap() {
 }
 
 function drawMap() {
+	getForm();
 	var canvas = document.getElementById("gMap");
 	canvas.style.display = "block";
 	var context = gMap.getContext("2d");
