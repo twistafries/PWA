@@ -42,6 +42,7 @@ function drawMap() {
 	
 	context.rect(0, 0, canvas.width, canvas.height);
 	context.rect(10, 0, canvas.width, canvas.height*0.07);
+	context.rect(10, 0, canvas.width*0.07, canvas.height);
 	context.stroke();
 	
 	var rad = document.getElementById("rad");

@@ -1,94 +1,89 @@
-
 <html>
+	<!-- to do:
+	3. skip loading an image, use canvas to draw the map instead
+	4. service worker -->
 	<head>
 		<title>SM Baguio MApp</title>
-		<link rel="stylesheet" href="styles/stylesheet.css"/>
+		<link rel="stylesheet" href="styles/style_mobile.css"/>
+		<script src="appfx.js"></script> 
 	</head>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<body>
-		<div>
-			<button class="btn" id="select" onclick="showRad()">Select Products</button>
-				<div id="rad">
-					<form>
-						<input type="radio" value="Fresh Meat"> Fresh Meat
-						<input type="radio" value="Fish"> Fish
-						<input type="radio" value="Fruits and Veg"> Fruits and Vegetables
-						<input type="radio" value="Frozen Food"> Frozen Food
-						<input type="radio" value="IceCream"> Ice Cream
-						<input type="radio" value="Bread/Pastries"> Bread and Pastries
-						<input type="radio" value="Milk"> Milk
-						<input type="radio" value="Cereal/Oatmeal"> Cereal or Oatmeal
-						<input type="radio" value="Pasta"> Pasta
-						<input type="radio" value="Canned Goods"> Canned Goods
-						<input type="radio" value="Tomato Sauces/Paste"> Tomato Sauces or Paste
-						<input type="radio" value="Imports"> Imported Goods
-						<input type="radio" value="Cooking Oil"> Cooking Oil
-						<input type="radio" value="Clothing"> Clothing
-						<input type="radio" value="Chocolates"> Chocolates
-						<input type="radio" value="Coffee"> Coffee
-						<input type="radio" value="Appliances"> Appliances
-						<input type="radio" value="Kitchen Necessities"> Kitchen Necessities
-						<input type="radio" value="Rice"> Rice
-						<input type="radio" value="Sugar"> Sugar
-					</form>	
-				</div>
-				
-				<!-- missing select entrance -->
-				
-			<button class="btn" id="generate" onclick = "drawMap()">Generate Map</button>
-			<button class="btn" id="hide" onclick = "hideMap()">Hide Map</button>
-			<canvas id = "gMap"> You might need to update your browser to see the image. </canvas>
-		</div>
-		<div>
-		<a href="">About the App</a>
-		</div>
-		
-		<script>
-			function showRad(){
-				var radDiv = document.getElementById("rad");
-				if(radDiv.style.display === "none"){
-					radDiv.style.display = "block";
-				} else {
-					radDiv.style.display = "none";
-				}
-			}
-			
-			function hideMap(){
-				var canvas = document.getElementById("gMap");
-				var gen = document.getElementById("generate");
-				var hide = document.getElementById("hide");
-				gen.style.display = "block";
-				hide.style.display = "none";
-				canvas.style.display = "none";
-			}
-			
-			function drawMap(){
-				var canvas = document.getElementById("gMap");
-				canvas.style.display = "block";
-				var context = gMap.getContext("2d");
-				var hide = document.getElementById("hide");
-				var gen = document.getElementById("generate");
-				hide.style.display = "block";
-				gen.style.display = "none";
-				var image = new Image();
-				image.onload = function(){
-					context.drawImage(image, 0, 0, image.width, image.height,
-										0, 0, canvas.width, canvas.height);
-				}
-				
-				image.src = "SMSupermarketLayout.jpg";
+		<div id="container">
+				<button class="btn" id="select" onclick="showRad()">Select Products</button>
+				<center>
+						<form class="checkbox" id="rad">
+							<input type="checkbox" class="check" id="item1" name="">
+							<label class="cblabel" for="item1">Fresh Meat</label>
+							<input type="checkbox" class="check" id="item2" name="">
+							<label class="cblabel" for="item2">Fish</label>
+							<input type="checkbox" class="check" id="item3" name="">
+							<label class="cblabel" for="item3">Fruits and Vegetables</label>
+							
+							<input type="checkbox" class="check" id="item4" name="">
+							<label class="cblabel" for="item4">Frozen Food</label>
+							<input type="checkbox" class="check" id="item5" name="">
+							<label class="cblabel" for="item5">Ice Cream</label>
+							<input type="checkbox" class="check" id="item6" name="">
+							<label class="cblabel" for="item6">Bread and Pastries</label>
+							
+							<input type="checkbox" class="check" id="item7" name="">
+							<label class="cblabel" for="item7">Milk</label>
+							<input type="checkbox" class="check" id="item8" name="">
+							<label class="cblabel" for="item8">Cereal or Oatmeal</label>
+							<input type="checkbox" class="check" id="item9" name="">
+							<label class="cblabel" for="item9">Pasta</label>
+							
+							<input type="checkbox" class="check" id="item10" name="">
+							<label class="cblabel" for="item10">Canned Goods</label>
+							<input type="checkbox" class="check" id="item11" name="">
+							<label class="cblabel" for="item11">Tomato Sauces or Paste</label>
+							<input type="checkbox" class="check" id="item12" name="">
+							<label class="cblabel" for="item12">Imported Goods</label>
+							
+							<input type="checkbox" class="check" id="item13" name="">
+							<label class="cblabel" for="item13">Cooking Oil</label>
+							<input type="checkbox" class="check" id="item14" name="">
+							<label class="cblabel" for="item14">Clothing</label>
+							<input type="checkbox" class="check" id="item15" name="">
+							<label class="cblabel" for="item15">Chocolates</label>
+							
+							<input type="checkbox" class="check" id="item16" name="">
+							<label class="cblabel" for="item16">Coffee</label>
+							<input type="checkbox" class="check" id="item17" name="">
+							<label class="cblabel" for="item17">Appliances</label>
+							<input type="checkbox" class="check" id="item18" name="">
+							<label class="cblabel" for="item18">Kitchen Necessities</label>
+							
+							<input type="checkbox" class="check" id="item19" name="">
+							<label class="cblabel" for="item19">Rice</label>
+							<input type="checkbox" class="check" id="item20" name="">
+							<label class="cblabel" for="item20">Sugar</label>
+							<input type="checkbox" class="check" id="item21" name="">
+							<label class="cblabel" for="item21">Feminine Hygiene</label>
+							
+							<input type="checkbox" class="check" id="item22" name="">
+							<label class="cblabel" for="item22">Home Remedies</label>
+							<input type="checkbox" class="check" id="item23" name="">
+							<label class="cblabel" for="item23">Soaps and Washes</label>
+							<input type="checkbox" class="check" id="item24" name="">
+							<label class="cblabel" for="item24">Hygiene</label>
+							
+							<input type="checkbox" class="check" id="item25" name="">
+							<label class="cblabel" for="item25">Men's Hygiene</label>
+							<input type="checkbox" class="check" id="item26" name="">
+							<label class="cblabel" for="item26">Hair Care</label>
+							<input type="checkbox" class="check" id="item27" name="">
+							<label class="cblabel" for="item27">Detergents</label>
 
-					
-			}
-			
-			if("serviceWorker" in navigator) {
-				navigator.serviceWorker.register("/serviceworker.js").then(function () {
-					console.log("Service Worker Registered"); 
-				}).catch(function(){
-					console.log("Unable to register service worker.");
-				});
-			}
-		</script>
+							<button class="sub" id="generate" onclick = "drawMap()" type="button">Generate Map</button>
+							</form>	
+				<a href="about/About.html" id="abt">About the App</a>		
+				<button class="sub" id="hide" onclick = "hideMap()" type="button">Hide Map</button>
+				<canvas id = "gMap"> You might need to update your browser or use a different one to see the image.</canvas>
+				</center>		
+			</div>
+
 	</body>
 	
 </html>
