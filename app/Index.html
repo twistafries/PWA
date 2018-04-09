@@ -5,7 +5,9 @@
 	<head>
 		<title>SM Baguio MApp</title>
 		<link rel="stylesheet" href="styles/style_mobile.css"/>
+		<link rel="manifest" href="manifest.json">
 		<script src="appfx.js"></script> 
+		
 	</head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<body>
@@ -83,7 +85,13 @@
 				<canvas id = "gMap"> You might need to update your browser or use a different one to see the image.</canvas>
 				</center>		
 			</div>
-
+		<script>
+			if('serviceWorker' in navigator) {
+			  navigator.serviceWorker
+					   .register('/serviceworker.js')
+					   .then(function() { console.log("Service Worker Registered"); });
+			}
+		</script>
 	</body>
 	
 </html>

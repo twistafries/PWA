@@ -35,14 +35,58 @@ function drawMap() {
 	var context = gMap.getContext("2d");
 	context.canvas.width = window.innerWidth;
 	context.canvas.height = window.innerHeight;
+	var x = canvas.width;
+	var y = canvas.height;
 	var hide = document.getElementById("hide");
 	var gen = document.getElementById("generate");
 	hide.style.display = "block";
 	gen.style.display = "none";
 	
-	context.rect(0, 0, canvas.width, canvas.height);
-	context.rect(10, 0, canvas.width, canvas.height*0.07);
-	context.rect(10, 0, canvas.width*0.07, canvas.height);
+	context.rect(0, 0, x, y);
+	
+	//top and leftmost
+	context.rect(x*0.08, 0, x, y*0.05);
+	context.rect(0, y*0.04, x*0.05, y);
+	
+	//1 - 6
+	context.rect(x*0.08, y*0.3, x*0.06, y*0.13);
+	context.rect(x*0.16, y*0.3, x*0.06, y*0.13);
+	context.rect(x*0.08, y*0.5, x*0.06, y*0.13);
+	context.rect(x*0.16, y*0.5, x*0.06, y*0.13);
+	context.rect(x*0.08, y*0.7, x*0.06, y*0.13);
+	context.rect(x*0.16, y*0.7, x*0.06, y*0.13);
+	
+	//top aisles
+	context.rect(x*0.25, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.308, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.364, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.422, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.480, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.538, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.596, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.654, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.712, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.770, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.828, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.886, y*0.16, x*0.033, y*0.3);
+	context.rect(x*0.944, y*0.16, x*0.033, y*0.3);
+	
+	
+	//bot aisles
+	context.rect(x*0.25, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.308, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.364, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.422, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.480, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.538, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.596, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.654, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.712, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.770, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.828, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.886, y*0.5, x*0.033, y*0.3);
+	context.rect(x*0.944, y*0.5, x*0.033, y*0.3);
+	
 	context.stroke();
 	
 	var rad = document.getElementById("rad");
