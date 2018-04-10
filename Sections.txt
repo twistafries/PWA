@@ -1,85 +1,81 @@
 SECTIONS
-
-01:	Chicken Produce
-02:	Fish Produce
-03:	Fruits and Vegetables
-04:	Fruits and Vegetables
+01:	Eggs
+	Fresh Produce
+02:	Powdered Milk
+	Coffee Beans
+03:	Chicken Produce
+04:	Fish Produce
 05:	Fruits and Vegetables
 06:	Fruits and Vegetables
-
-07:	Ice Cream
+07:	Fruits and Vegetables
+08:	Fruits and Vegetables
+09:	Ice Cream
 	Frozen Section
-08:	Bread
+10:	Bread
 	Pastries
 	Milk
-09:	Cereals
+11:	Cereals
 	Oatmeals
-10:	Pasta
-11:	Canned Vegetables
-12:	Tomato Sauce
+12:	Pasta
+13:	Canned Vegetables
+14:	Tomato Sauce
 	Tomato Paste
-13:	Imported Goods
-14:	Imported Goods
-15:	Cooking Oil
-16:	Clothing
-17:	Chocolates
+15:	Imported Goods
+16:	Imported Goods
+17:	Cooking Oil
+18:	Chocolates
 	Coffee
-18:	Appliances
-19:	Kitchen Needs
-
-20:	Rice
+19:	bottled juice
+	tea
+20:	Appliances
+21:	Kitchen Needs
+22:	Rice
 	Sugar
 	Condiments
 	Mixes
 	Soups
-21:	salad aids
+23:	salad aids
 	cheese
 	spreads
 	pantyliners
 	sanitary napkins
-22:	home remedies
+24:	home remedies
 	sanitizers
 	cotton
 	lotion
 	powder
-23:	whitening soap
+25:	whitening soap
 	body wash
 	germicidal soap
 	imported lotion
-24:	body care
+26:	body care
 	body spray
 	mouthwash
 	toothpaste
-25:	facial toner
+27:	facial toner
 	facial wash
 	facial cream
 	conditioner
-26:	shampoo
-	detergent bar
-27:	detergent bar
-	detergent powder
-	household
-	fabric conditioner
-	bleaches
 28:	household
 	picnic items
-29:	bottled juice
-	tea
-30:	softdrinks
+29:	softdrinks
 	canned beer
 	energy drink
 	canned biscuits
-31:	wafers
+30:	wafers
 	canned biscuits
 	packed biscuits
-32:	nuts
+31:	nuts
 	crackers
 	popcorn
 	corn snacks
 	potato chips
+32:	shampoo
+	detergent bar
+	detergent powder
+33:	household
+	fabric conditioner
+	bleaches
+34:	Clothing
 
-33:	Eggs
-	Fresh Produce
-34:	Powdered Milk
-	Coffee Beans
 	

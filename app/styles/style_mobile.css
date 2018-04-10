@@ -5,6 +5,7 @@ body {
 	min-width: 50%;
 	border: 0;
 	position: relative;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 div {
@@ -85,7 +86,7 @@ input {
 	background-color: #91b4ff;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
 	label {
 		display: block;
 		text-align: center;
