@@ -1,9 +1,59 @@
+var xhr;
+var url = 'resources/dimensions.json';
+var sections;
+var chk;
+var lbl;
+
+function getFetch(){
+	xhr = new XMLHttpRequest();
+	xhr.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			sections = JSON.parse(this.responseText);
+		}
+	}
+	xhr.open('GET', url, true);
+	xhr.send();
+}
+
+function drawButton(name, i){
+	chk = document.createElement("input");
+	//rad = document.getElementById("rad");
+	chk.type = "checkbox";
+	chk.className = "check";
+	chk.name = name;
+	chk.value = name;
+	chk.id = "item"+i;
+	
+	lbl = document.createElement("label");
+	lbl.htmlFor = chk.id;
+	lbl.className = "cblabel";
+	lbl.appendChild(document.createTextNode(i + " " + name));
+	
+	rad.appendChild(chk);
+	rad.appendChild(lbl);
+	console.log(chk.checked);
+}
+
+function makeHTML(){
+	for(var i in sections){
+		drawButton(sections[i].name, i);
+	}
+}
+
+window.onload = function(){
+	getFetch();
+}
 
 function showRad() {
 	var radDiv = document.getElementById("rad");
 	var a = document.getElementById("abt");
 	radDiv.style.display = radDiv.style.display === 'none' ? 'block' : 'none';
 	a.style.display = a.style.display === 'block' ? 'none' : 'block';
+	var existingID = document.getElementById("item1");
+	console.log(existingID);
+	if(existingID == null){
+		makeHTML();
+	}
 }
 
 function hideMap() {
@@ -14,7 +64,6 @@ function hideMap() {
 	hide.style.display = "none";
 	canvas.style.display = "none";
 }
-
 
 function drawMap() {
 	var canvas = document.getElementById("gMap");
@@ -28,67 +77,27 @@ function drawMap() {
 	var gen = document.getElementById("generate");
 	hide.style.display = "block";
 	gen.style.display = "none";
-	
 	//container
 	context.rect(0, 0, x, y);
 	
-	var sections = [
-		//top and leftmost
-		//context.rect(x*0.08, 0, x, y*0.05);
-		{"x":x*0.08, "y":0, "width":x, "length":y*0.05},
-		{"x":0, "y":y*0.04, "width":x*0.05, "length":y},
-		//1 - 6
-		{"x":x*0.08, "y":y*0.3, "width":x*0.06, "length":y*0.13},
-		{"x":x*0.16, "y":y*0.3, "width":x*0.06, "length":y*0.13},
-		{"x":x*0.08, "y":y*0.5, "width":x*0.06, "length":y*0.13},
-		{"x":x*0.16, "y":y*0.5, "width": x*0.06, "length":y*0.13},
-		{"x":x*0.08, "y":y*0.7, "width":x*0.06, "length":y*0.13},
-		{"x":x*0.16, "y":y*0.7, "width": x*0.06, "length":y*0.13},
-		
-		//top aisles
-		{"x":x*0.25, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.308, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.364, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.422, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.480, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.538, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.596, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.654, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.712, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.770, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.828, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.886, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.944, "y":y*0.16, "width":x*0.033, "length":y*0.3},
-		
-		//bot aisles
-		{"x":x*0.25, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.308, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.364, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.422, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.480, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.538, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.596, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.712, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.654, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.770, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.828, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.886, "y":y*0.5, "width":x*0.033, "length":y*0.3},
-		{"x":x*0.944, "y":y*0.5, "width":x*0.033, "length":y*0.3}
-	];
-	
 	var inputs = document.getElementsByTagName('input');
-	
+	var k = 8;
 	for(var i in sections){
-		context.rect(sections[i].x, sections[i].y, sections[i].width, sections[i].length);
+		context.rect(sections[i].x*x, sections[i].y*y, sections[i].width*x, sections[i].length*y);
+		
 		for(var j = 0; j < inputs.length; j++){
 			if(inputs[j].checked && i == j){
 				context.fillStyle = '#91b4ff';
-				context.fillRect(sections[i].x, sections[i].y, sections[i].width, sections[i].length);
+				context.fillRect(sections[i].x*x, sections[i].y*y, sections[i].width*x, sections[i].length*y);
+				//context.textAlign="center";
+				//context.textBaseline = "middle";
+				context.fillStyle = "black";
+				context.font = x/40 + 'px Calibri';
+				context.fillText(j, sections[i].x*x, sections[i].y*y);
 			}
 		}
 	}
 	
-
 	
 	//paint
 	context.stroke();
@@ -97,3 +106,5 @@ function drawMap() {
 	var a = document.getElementById("abt");
 	a.style.display = "block";
 }
+
+

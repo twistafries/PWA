@@ -1,0 +1,41 @@
+[
+		{"x":0.08, "y":0, "width":1, "length":0.05, "name":"Powdered Milk/Coffee Beans"},
+		{"x":0, "y":0.04, "width":0.05, "length":1, "name":"Eggs/Fresh Produce"},
+
+		{"x":0.08, "y":0.3, "width":0.06, "length":0.13, "name":"Chicken Produce"},
+		{"x":0.16, "y":0.3, "width":0.06, "length":0.13, "name":"Fish Produce"},
+		{"x":0.08, "y":0.5, "width":0.06, "length":0.13, "name":"Fruits and Vegetables 1"},
+		{"x":0.16, "y":0.5, "width": 0.06, "length":0.13, "name":"Fruits and Vegetables 2"},
+		{"x":0.08, "y":0.7, "width":0.06, "length":0.13, "name":"Fruits and Vegetables 3"},
+		{"x":0.16, "y":0.7, "width": 0.06, "length":0.13, "name":"Fruits and Vegetables 4"},
+		
+
+		{"x":0.25, "y":0.16, "width":0.033, "length":0.3, "name":"Ice Cream/Frozen Section"},
+		{"x":0.308, "y":0.16, "width":0.033, "length":0.3, "name":"Bread/Pastries/Milk"},
+		{"x":0.364, "y":0.16, "width":0.033, "length":0.3, "name":"Cereals/Oatmeals"},
+		{"x":0.422, "y":0.16, "width":0.033, "length":0.3, "name":"Pasta"},
+		{"x":0.480, "y":0.16, "width":0.033, "length":0.3, "name":"Canned Vegetables"},
+		{"x":0.538, "y":0.16, "width":0.033, "length":0.3, "name":"Tomato Sauce/Paste"},
+		{"x":0.596, "y":0.16, "width":0.033, "length":0.3, "name":"Imported Goods 1"},
+		{"x":0.654, "y":0.16, "width":0.033, "length":0.3, "name":"Imported Goods 2"},
+		{"x":0.712, "y":0.16, "width":0.033, "length":0.3, "name":"Cooking Oil"},
+		{"x":0.770, "y":0.16, "width":0.033, "length":0.3, "name":"Chocolates"},
+		{"x":0.828, "y":0.16, "width":0.033, "length":0.3, "name":"Bottled Juice/Tea"},
+		{"x":0.886, "y":0.16, "width":0.033, "length":0.3, "name":"Appliances"},
+		{"x":0.944, "y":0.16, "width":0.033, "length":0.3, "name":"Kitchen Needs"},
+		
+
+		{"x":0.25, "y":0.5, "width":0.033, "length":0.3, "name":"Rice/Condiments/Soups"},
+		{"x":0.308, "y":0.5, "width":0.033, "length":0.3, "name":"Salads/Spreads/Female Hygiene"},
+		{"x":0.364, "y":0.5, "width":0.033, "length":0.3, "name":"Health/Hygiene"},
+		{"x":0.422, "y":0.5, "width":0.033, "length":0.3, "name":"Whitening Soap/Body Wash/Germicidal Soap/Imported Lotions"},
+		{"x":0.480, "y":0.5, "width":0.033, "length":0.3, "name":"Body Care/Body Spray/Hygiene"},
+		{"x":0.538, "y":0.5, "width":0.033, "length":0.3, "name":"Facial Toner/Facial Wash/Facial Cream/Conditioner"},
+		{"x":0.596, "y":0.5, "width":0.033, "length":0.3, "name":"Household/Picnic Items"},
+		{"x":0.712, "y":0.5, "width":0.033, "length":0.3, "name":"Drinks"},
+		{"x":0.654, "y":0.5, "width":0.033, "length":0.3, "name":"Wafers/Canned Biscuits/Packed Biscuits"},
+		{"x":0.770, "y":0.5, "width":0.033, "length":0.3, "name":"Nuts/Crackers/Popcorn/Corn Snacks/Potato Chips"},
+		{"x":0.828, "y":0.5, "width":0.033, "length":0.3, "name":"Shampoo/Detergent Bar/Detergent Powder"},
+		{"x":0.886, "y":0.5, "width":0.033, "length":0.3, "name":"Household/Fabric Conditioner/Bleaches"},
+		{"x":0.944, "y":0.5, "width":0.033, "length":0.3, "name":"Clothing"}
+		]

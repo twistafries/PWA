@@ -1,0 +1,83 @@
+
+function showRad() {
+	var radDiv = document.getElementById("rad");
+	var a = document.getElementById("abt");
+	radDiv.style.display = radDiv.style.display === 'none' ? 'block' : 'none';
+	a.style.display = a.style.display === 'block' ? 'none' : 'block';
+}
+
+function hideMap() {
+	var canvas = document.getElementById("gMap");
+	var gen = document.getElementById("generate");
+	var hide = document.getElementById("hide");
+	gen.style.display = "block";
+	hide.style.display = "none";
+	canvas.style.display = "none";
+}
+
+
+function drawMap() {
+	var canvas = document.getElementById("gMap");
+	canvas.style.display = "block";
+	var context = gMap.getContext("2d");
+	context.canvas.width = window.innerWidth;
+	context.canvas.height = window.innerHeight;
+	var x = canvas.width;
+	var y = canvas.height;
+	var hide = document.getElementById("hide");
+	var gen = document.getElementById("generate");
+	hide.style.display = "block";
+	gen.style.display = "none";
+	
+	//container
+	context.rect(0, 0, x, y);
+	var fetch = new XMLHttpRequest();
+	fetch.open('GET', 'dimensions.json', true);
+	fetch.onload = function(){
+		if(this.status == 200) {
+			var elem = JSON.parse(this.responseText);
+            console.log(elem);
+            elem.foreach(function(dimension) {
+                context.rect(dimension.x, dimension.y, dimension.width, dimension.length);
+            });
+			elem.foreach(function(dimension) {
+                
+            });
+		}
+	}
+	
+	var inputs = document.getElementsByTagName('input');
+	var k = 8;
+	for(var i in sections){
+		context.rect(sections[i].x, sections[i].y, sections[i].width, sections[i].length);
+		for(var j = 0; j < inputs.length; j++){
+			if(inputs[j].checked && i == j){
+				context.fillStyle = '#' + ('0091' + (k*4).toString(16)).slice(-6);
+				context.fillRect(sections[i].x, sections[i].y, sections[i].width, sections[i].length);
+				k++;
+			}
+		}
+	}
+	
+
+	
+	//paint
+	context.stroke();
+	var rad = document.getElementById("rad");
+	rad.style.display = "none";
+	var a = document.getElementById("abt");
+	a.style.display = "block";
+}
+
+function createInputForm(itemID, name) {
+    var html = `<input type="checkbox" class="check" id="${itemID}">
+				<label class="cblabel" for="${itemID}">${name}</label>`
+    return html;
+}
+function print() {
+    var itemID = item;
+    for(int i = 1; i <= elem.length; i++) {
+        console.log(itemID+1);
+    }
+}
+

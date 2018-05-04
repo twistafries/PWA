@@ -1,8 +1,7 @@
-<html>
-	<!-- to do:
-	3. skip loading an image, use canvas to draw the map instead
-	4. service worker -->
+<!DOCTYPE html>
+<html lang="en">
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>SM Baguio MApp</title>
 		<link rel="stylesheet" href="styles/style_mobile.css"/>
 		<link rel="manifest" href="manifest.json">
@@ -21,85 +20,7 @@
 		<div id="container">
 			<center>
 			<button class="btn" id="select" onclick="showRad()">Select Products</button>
-			<form class="checkbox" id="rad">
-				
-				<input type="checkbox" class="check" id="item1" name="">
-				<label class="cblabel" for="item1">Powdered Milk/Coffee Beans</label>
-				<input type="checkbox" class="check" id="item2" name="">
-				<label class="cblabel" for="item2">Eggs/Fresh Produce</label>
-				
-				<input type="checkbox" class="check" id="item3" name="">
-				<label class="cblabel" for="item3">Chicken Produce</label>		
-				<input type="checkbox" class="check" id="item4" name="">
-				<label class="cblabel" for="item4">Fish Produce</label>
-				<input type="checkbox" class="check" id="item5" name="">
-				<label class="cblabel" for="item5">Fruits and Vegetables</label>
-				<input type="checkbox" class="check" id="item6" name="">
-				<label class="cblabel" for="item6">Fruits and Vegetables</label>
-							
-				<input type="checkbox" class="check" id="item7" name="">
-				<label class="cblabel" for="item7">Fruits and Vegetables</label>
-				<input type="checkbox" class="check" id="item8" name="">
-				<label class="cblabel" for="item8">Fruits and Vegetables</label>
-				<input type="checkbox" class="check" id="item9" name="">
-				<label class="cblabel" for="item9">Ice Cream/Frozen Section</label>
-				<input type="checkbox" class="check" id="item10" name="">
-				<label class="cblabel" for="item10">Bread/Pastries/Milk</label>
-				
-				<input type="checkbox" class="check" id="item11" name="">
-				<label class="cblabel" for="item11">Cereals/Oatmeals</label>
-				<input type="checkbox" class="check" id="item12" name="">
-				<label class="cblabel" for="item12">Pasta</label>
-				<input type="checkbox" class="check" id="item13" name="">
-				<label class="cblabel" for="item13">Canned Vegetables</label>
-				<input type="checkbox" class="check" id="item14" name="">
-				<label class="cblabel" for="item14">Tomato Sauce/Paste</label>
-				
-				<input type="checkbox" class="check" id="item15" name="">
-				<label class="cblabel" for="item15">Imported Goods</label>
-				<input type="checkbox" class="check" id="item16" name="">
-				<label class="cblabel" for="item16">Imported Goods</label>
-				<input type="checkbox" class="check" id="item17" name="">
-				<label class="cblabel" for="item17">Cooking Oil</label>
-				<input type="checkbox" class="check" id="item18" name="">
-				<label class="cblabel" for="item18">Chocolates</label>
-							
-				<input type="checkbox" class="check" id="item19" name="">
-				<label class="cblabel" for="item19">Bottled Juice/Tea</label>
-				<input type="checkbox" class="check" id="item20" name="">
-				<label class="cblabel" for="item20">Appliances</label>
-				<input type="checkbox" class="check" id="item21" name="">
-				<label class="cblabel" for="item21">Kitchen Needs</label>
-				<input type="checkbox" class="check" id="item22" name="">
-				<label class="cblabel" for="item22">Rice/Sugar/Condiments/Mixes/Soups</label>
-				
-				<input type="checkbox" class="check" id="item23" name="">
-				<label class="cblabel" for="item23">Salad Aids/Cheese/Spreads/Pantyliners/Sanitary Napkins</label>
-				<input type="checkbox" class="check" id="item24" name="">
-				<label class="cblabel" for="item24">Home Remedies/Sanitizers/Cotton/Lotion/Powder</label>
-				<input type="checkbox" class="check" id="item25" name="">
-				<label class="cblabel" for="item25">Whitening Soap/Body Wash/Germicidal Soap/Imported Lotion</label>
-				<input type="checkbox" class="check" id="item26" name="">
-				<label class="cblabel" for="item26">Body Care/Body Spray/Mouthwash/Toothpaste</label>
-				
-				<input type="checkbox" class="check" id="item27" name="">
-				<label class="cblabel" for="item27">Facial Toner/Facial Wash/Facial Cream/Conditioner</label>
-				<input type="checkbox" class="check" id="item28" name="">
-				<label class="cblabel" for="item28">Household/Picnic Items</label>
-				<input type="checkbox" class="check" id="item29" name="">
-				<label class="cblabel" for="item29">Sofdrinks/Canned Beer/Energy Drink/Canned Biscuits</label>
-				<input type="checkbox" class="check" id="item30" name="">
-				<label class="cblabel" for="item30">Wafers/Canned Biscuits/Packed Biscuits</label>
-				
-				<input type="checkbox" class="check" id="item31" name="">
-				<label class="cblabel" for="item31">Nuts/Crackers/Popcorn/Corn Snacks/Potato Chips</label>
-				<input type="checkbox" class="check" id="item32" name="">
-				<label class="cblabel" for="item32">Shampoo/Detergent Bar/Detergent Powder</label>
-				<input type="checkbox" class="check" id="item33" name="">
-				<label class="cblabel" for="item33">Household/Fabric Conditioner/Bleaches</label>
-				<input type="checkbox" class="check" id="item34" name="">
-				<label class="cblabel" for="item34">Clothing</label>
-							
+			<form class="checkbox" id="rad" style="display: none">
 				<button class="sub" id="generate" onclick = "drawMap()" type="button">Generate Map</button>
 			</form>	
 			

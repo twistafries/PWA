@@ -10,12 +10,14 @@ self.addEventListener('install', function(e) {
 	   '/about/g1.jpg',
 	   '/about/g2.jpg',
 	   '/about/style.css',
-	   'styles/style_mobile.css',
+	   '/styles/style_mobile.css',
 	   '/appfx.js',
 	   '/icon1.png',
 	   '/icon2.png',
 	   '/icon3.png',
-	   '/manifest.json'
+	   '/icon.ICO',
+	   '/manifest.json',
+	   '/resources/dimensions.json'
      ]);
    })
  );

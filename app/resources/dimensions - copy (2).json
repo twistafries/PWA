@@ -1,0 +1,41 @@
+[
+		{"x":"x*0.08", "y":"0", "width":"x", "length":"y*0.05", "name":"Powdered Milk/Coffee Beans"},
+		{"x":0, "y":"y*0.04", "width":"x*0.05", "length":"y", "name":"Eggs/Fresh Produce"},
+
+		{"x":"x*0.08", "y":"y*0.3", "width":"x*0.06", "length":"y*0.13", "name":"Chicken Produce"},
+		{"x":"x*0.16", "y":"y*0.3", "width":"x*0.06", "length":"y*0.13", "name":"Fish Produce"},
+		{"x":"x*0.08", "y":"y*0.5", "width":"x*0.06", "length":"y*0.13", "name":"Fruits and Vegetables 1"},
+		{"x":"x*0.16", "y":"y*0.5", "width": "x*0.06", "length":"y*0.13", "name":"Fruits and Vegetables 2"},
+		{"x":"x*0.08", "y":"y*0.7", "width":"x*0.06", "length":"y*0.13", "name":"Fruits and Vegetables 3"},
+		{"x":"x*0.16", "y":"y*0.7", "width": "x*0.06", "length":"y*0.13", "name":"Fruits and Vegetables 4"},
+		
+
+		{"x":"x*0.25", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Ice Cream/Frozen Section"},
+		{"x":"x*0.308", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Bread/Pastries/Milk"},
+		{"x":"x*0.364", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Cereals/Oatmeals"},
+		{"x":"x*0.422", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Pasta"},
+		{"x":"x*0.480", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Canned Vegetables"},
+		{"x":"x*0.538", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Tomato Sauce/Paste"},
+		{"x":"x*0.596", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Imported Goods 1"},
+		{"x":"x*0.654", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Imported Goods 2"},
+		{"x":"x*0.712", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Cooking Oil"},
+		{"x":"x*0.770", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Chocolates"},
+		{"x":"x*0.828", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Bottled Juice/Tea"},
+		{"x":"x*0.886", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Appliances"},
+		{"x":"x*0.944", "y":"y*0.16", "width":"x*0.033", "length":"y*0.3", "name":"Kitchen Needs"},
+		
+
+		{"x":"x*0.25", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Rice/Sugar/Condiments/Mixes/Soups"},
+		{"x":"x*0.308", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Salad Aids/Cheese/Spreads/Female Hygiene"},
+		{"x":"x*0.364", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Home Remedies/Sanitizers/Cotton/Lotion/Powder"},
+		{"x":"x*0.422", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Whitening Soap/Body Wash/Germicidal Soap/Imported Lotions"},
+		{"x":"x*0.480", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Body Care/Body Spray/Hygiene"},
+		{"x":"x*0.538", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Facial Toner/Facial Wash/Facial Cream/Conditioner"},
+		{"x":"x*0.596", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Household/Picnic Items"},
+		{"x":"x*0.712", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Softdrinks/Canned Beer/Energy Drink/Canned Biscuits"},
+		{"x":"x*0.654", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Wafers/Canned Biscuits/Packed Biscuits"},
+		{"x":"x*0.770", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Nuts/Crackers/Popcorn/Corn Snacks/Potato Chips"},
+		{"x":"x*0.828", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Shampoo/Detergent Bar/Detergent Powder"},
+		{"x":"x*0.886", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Household/Fabric Conditioner/Bleaches"},
+		{"x":"x*0.944", "y":"y*0.5", "width":"x*0.033", "length":"y*0.3", "name":"Clothing"}
+		]
